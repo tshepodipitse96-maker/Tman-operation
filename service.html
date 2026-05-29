@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMAN Operations - Services</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0b3d91">
+    <meta name="description" content="Services offered by TMAN Operations">
+</head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="service.html">Services</a> |
-            <a href="contact.html">Contact</a> |
-            <a href="enquiry.html">Enquiry</a>
-        </nav>
-        <hr>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <span class="logo" aria-hidden="true"></span>
+                <h1>TMAN Operations</h1>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <center><h1>Services</h1></center>
-        <p>Plumbing services offered [e.g., repairs, installation, maintenance]</p>
-        <center><img src="c:\Users\Student\Downloads\team-engineers-examining..webp" width="400" alt="Engineers examining"></center>
-        <center><h2>Service Areas</h2></center>
-        <p>Local towns and cities</p>
-        <center><img src="c:\Users\Student\Downloads\OIP.webp" width="400" alt="Service areas"></center>
-        <center><h2>Pricing</h2></center>
-        <ul>
-            <li>Faucet repairs and replacements: R180</li>
-            <li>Toilet install and repairs: R150</li>
-            <li>Gutter leaks: R80</li>
-            <li>Damaged pipes: R1500</li>
-        </ul>
-        <center><img src="c:\Users\Student\Downloads\Plumbing-Egg-Harbor.webp" width="400" alt="Plumbing work"></center>
+
+    <main class="site-main">
+        <div class="container">
+            <section class="hero">
+                <h1>Services</h1>
+                <p>High-quality plumbing and electrical services tailored to your needs.</p>
+                <p style="margin-top:12px"><a class="btn btn-primary" href="contact.html">Book Now</a></p>
+            </section>
+
+            <section class="card">
+                <h2>Plumbing Services</h2>
+                <p>Repairs, installations and maintenance for residential and commercial properties.</p>
+                <img class="responsive" src="c:\Users\Student\Downloads\team-engineers-examining..webp" alt="Engineers examining">
+            </section>
+
+            <section class="card">
+                <h2>Service Areas</h2>
+                <p>We operate across local towns and cities in Gauteng.</p>
+                <img class="responsive" src="c:\Users\Student\Downloads\OIP.webp" alt="Service areas">
+            </section>
+
+            <section class="card">
+                <h2>Pricing</h2>
+                <ul class="services">
+                    <li>Faucet repairs and replacements: R180</li>
+                    <li>Toilet install and repairs: R150</li>
+                    <li>Gutter leaks: R80</li>
+                    <li>Damaged pipes: R1500</li>
+                </ul>
+            </section>
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Book a service: contact@tmanoperations.example</p>
+        </div>
+    </footer>
 </body>
 </html>

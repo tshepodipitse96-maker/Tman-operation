@@ -5,35 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMAN Operations - Contact</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <meta name="description" content="Contact TMAN Operations for enquiries and bookings">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="service.html">Services</a> |
-            <a href="contact.html">Contact</a> |
-            <a href="enquiry.html">Enquiry</a>
-        </nav>
-        <hr>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <span class="logo" aria-hidden="true"></span>
+                <h1>TMAN Operations</h1>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="enquiry.html">Enquiry</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <center><h1>Contact Form</h1></center>
-        <center><form action="#" method="post">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required placeholder="Name" autocomplete="given-name"><br><br>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required placeholder="Surname" autocomplete="family-name"><br><br>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required placeholder="Address" autocomplete="address-line1"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="email" autocomplete="email"><br><br>
-            <label for="telephone">Telephone:</label>
-            <input type="tel" id="telephone" name="telephone" required placeholder="phone number" autocomplete="tel"><br><br>
-            <label for="question">Ask a question:</label>
-            <input type="text" id="question" name="question" required placeholder="Does TMAN operations operate everyday or there are specific operation days?"><br><br>
-            <input type="submit" value="Submit">
-        </form></center>
+
+    <main class="site-main">
+        <div class="container">
+            <section class="hero">
+                <h1>Contact Us</h1>
+                <p>Reach out with questions, bookings or emergency requests. We'll respond promptly.</p>
+            </section>
+
+            <section class="card">
+                <form class="contact-form" action="#" method="post">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Name" autocomplete="given-name">
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Surname" autocomplete="family-name">
+
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required placeholder="Address" autocomplete="address-line1">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="email" autocomplete="email">
+
+                    <label for="telephone">Telephone</label>
+                    <input type="tel" id="telephone" name="telephone" required placeholder="phone number" autocomplete="tel">
+
+                    <label for="question">Ask a question</label>
+                    <textarea id="question" name="question" rows="4" required placeholder="Type your question here"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Contact: info@tmanoperations.example | Tel: +27 800 000 000</p>
+        </div>
+    </footer>
 </body>
 </html>
