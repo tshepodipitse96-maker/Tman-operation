@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMAN Operations - Services</title>
+    <title>TMAN Operations Services | Search Plumbing, Electrical, and Maintenance Work</title>
+    <meta name="description" content="Browse TMAN Operations services, search by keyword, filter by category, sort by price, and request availability for plumbing and electrical work in Gauteng.">
+    <meta name="keywords" content="plumbing services Gauteng, electrical services Gauteng, emergency plumber, drain cleaning, maintenance plans">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b3d91">
+    <meta property="og:title" content="TMAN Operations Services">
+    <meta property="og:description" content="Search plumbing, electrical, installation, and maintenance services from TMAN Operations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tman-operations.netlify.app/services">
+    <meta property="og:image" content="https://tman-operations.netlify.app/plumbing.tman%20operations.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://tman-operations.netlify.app/services">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#0b3d91">
-    <meta name="description" content="Services offered by TMAN Operations">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html">
                 <span class="logo" aria-hidden="true"></span>
-                <h1>TMAN Operations</h1>
+                <span class="brand-title">TMAN Operations</span>
             </a>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="service.html">Services</a>
+                <a href="service.html" aria-current="page">Services</a>
                 <a href="contact.html">Contact</a>
                 <a href="enquiry.html">Enquiry</a>
             </nav>
@@ -28,40 +37,102 @@
 
     <main class="site-main">
         <div class="container">
-            <section class="hero">
-                <h1>Services</h1>
-                <p>High-quality plumbing and electrical services tailored to your needs.</p>
-                <p style="margin-top:12px"><a class="btn btn-primary" href="contact.html">Book Now</a></p>
+            <section class="hero" data-animate>
+                <div>
+                    <span class="eyebrow">Service catalogue</span>
+                    <h1>Find the right service for your property, timeline, and budget.</h1>
+                    <p>Use the interactive filters below to search plumbing, electrical, installation, and maintenance support. Each item loads dynamically from the site data and can be opened in a modal for more detail.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="enquiry.html">Request availability</a>
+                        <a class="btn btn-secondary" href="contact.html">General contact</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="plumbing.tman operations.jpg" alt="TMAN Operations service team working in the field" loading="eager" decoding="async">
+                </div>
             </section>
 
-            <section class="card">
-                <h2>Plumbing Services</h2>
-                <p>Repairs, installations and maintenance for residential and commercial properties.</p>
-                <img class="responsive" src="c:\Users\Student\Downloads\team-engineers-examining..webp" alt="Engineers examining">
+            <section class="card" data-animate>
+                <span class="eyebrow">Interactive filters</span>
+                <h2>Search and sort services</h2>
+                <div class="tabs" aria-label="Service categories">
+                    <button class="tab-button is-active" type="button" data-category-filter="all">All services</button>
+                    <button class="tab-button" type="button" data-category-filter="plumbing">Plumbing</button>
+                    <button class="tab-button" type="button" data-category-filter="electrical">Electrical</button>
+                    <button class="tab-button" type="button" data-category-filter="installation">Installation</button>
+                    <button class="tab-button" type="button" data-category-filter="maintenance">Maintenance</button>
+                    <button class="tab-button" type="button" data-category-filter="community">Community</button>
+                </div>
+
+                <div class="service-toolbar">
+                    <div>
+                        <label for="search">Search services</label>
+                        <input id="search" type="search" placeholder="Search by service, location, or keyword">
+                    </div>
+                    <div>
+                        <label for="sortServices">Sort services</label>
+                        <select id="sortServices">
+                            <option value="price-asc">Price: low to high</option>
+                            <option value="price-desc">Price: high to low</option>
+                            <option value="title-asc">Title: A to Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="service-results-meta">
+                    <p id="resultsCount">Loading services...</p>
+                    <p>Need a custom scope? <a href="enquiry.html">Send an enquiry</a>.</p>
+                </div>
+
+                <div id="servicesList" class="service-grid" aria-live="polite"></div>
             </section>
 
-            <section class="card">
-                <h2>Service Areas</h2>
-                <p>We operate across local towns and cities in Gauteng.</p>
-                <img class="responsive" src="c:\Users\Student\Downloads\OIP.webp" alt="Service areas">
+            <section class="section-grid">
+                <article class="card" data-animate>
+                    <span class="eyebrow">Coverage</span>
+                    <h2>Service areas</h2>
+                    <p>TMAN Operations supports clients across Johannesburg, Pretoria, Midrand, Centurion, Sandton, Randburg, and selected surrounding Gauteng communities.</p>
+                    <p>For urgent call-outs, travel distance and technician availability can influence final scheduling.</p>
+                </article>
+
+                <article class="card visual-card" data-animate>
+                    <img class="responsive" src="plumbing.jpg" alt="Technician reviewing service needs at a client property" loading="lazy" decoding="async">
+                </article>
             </section>
 
-            <section class="card">
-                <h2>Pricing</h2>
+            <section class="card" data-animate>
+                <span class="eyebrow">Pricing guide</span>
+                <h2>Typical starting prices</h2>
                 <ul class="services">
-                    <li>Faucet repairs and replacements: R180</li>
-                    <li>Toilet install and repairs: R150</li>
-                    <li>Gutter leaks: R80</li>
-                    <li>Damaged pipes: R1500</li>
+                    <li>Emergency leak repair from R450</li>
+                    <li>Drain cleaning from R320</li>
+                    <li>Bathroom fixture installation from R650</li>
+                    <li>Electrical fault finding from R550</li>
                 </ul>
             </section>
         </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>Book a service: contact@tmanoperations.example</p>
+        <div class="container footer-grid">
+            <div>
+                <h2>Ready to book?</h2>
+                <p>Use the enquiry page for pricing and availability or contact us directly for general support and urgent issues.</p>
+            </div>
+            <div>
+                <p><strong>Email:</strong> <a href="mailto:info@tmanoperations.example">info@tmanoperations.example</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+27800000000">+27 800 000 000</a></p>
+            </div>
         </div>
     </footer>
+
+    <div id="siteModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-panel">
+            <button id="modalClose" class="modal-close" type="button" aria-label="Close service details">×</button>
+            <h2 id="modalTitle">Service details</h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>

@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMAN Operations - Contact</title>
+    <title>Contact TMAN Operations | General Messages and Service Support</title>
+    <meta name="description" content="Contact TMAN Operations with a general message, booking question, or support request. Send validated details and view our Gauteng service map.">
+    <meta name="keywords" content="contact TMAN Operations, plumbing contact Gauteng, electrical support Gauteng, service map">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b3d91">
+    <meta property="og:title" content="Contact TMAN Operations">
+    <meta property="og:description" content="Send a general message to TMAN Operations and view our Gauteng service area map.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tman-operations.netlify.app/contact">
+    <meta property="og:image" content="https://tman-operations.netlify.app/plumbing.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://tman-operations.netlify.app/contact">
     <link rel="stylesheet" href="CSS/styles.css">
-    <meta name="description" content="Contact TMAN Operations for enquiries and bookings">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html">
                 <span class="logo" aria-hidden="true"></span>
-                <h1>TMAN Operations</h1>
+                <span class="brand-title">TMAN Operations</span>
             </a>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="service.html">Services</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" aria-current="page">Contact</a>
                 <a href="enquiry.html">Enquiry</a>
             </nav>
         </div>
@@ -26,41 +38,118 @@
 
     <main class="site-main">
         <div class="container">
-            <section class="hero">
-                <h1>Contact Us</h1>
-                <p>Reach out with questions, bookings or emergency requests. We'll respond promptly.</p>
+            <section class="hero" data-animate>
+                <div>
+                    <span class="eyebrow">General contact form</span>
+                    <h1>Send a message to TMAN Operations.</h1>
+                    <p>Use this page for general communication, support questions, booking follow-up, or emergency guidance. If you need service pricing or availability, the dedicated enquiry form is the better option.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="enquiry.html">Go to enquiry form</a>
+                        <a class="btn btn-secondary" href="service.html">Browse services</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="plumbing.jpg" alt="TMAN Operations service support overview" loading="eager" decoding="async">
+                </div>
             </section>
 
-            <section class="card">
-                <form class="contact-form" action="#" method="post">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required placeholder="Name" autocomplete="given-name">
+            <section class="section-grid">
+                <article class="card" data-animate>
+                    <span class="eyebrow">Validated form</span>
+                    <h2>General message</h2>
+                    <form
+                        id="contactForm"
+                        class="contact-form"
+                        name="contact"
+                        action="/"
+                        method="post"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
+                        data-recipient="info@tmanoperations.example"
+                    >
+                        <input type="hidden" name="form-name" value="contact">
+                        <p hidden>
+                            <label>Do not fill this out: <input name="bot-field"></label>
+                        </p>
 
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" required placeholder="Surname" autocomplete="family-name">
+                        <div class="contact-grid">
+                            <div>
+                                <label for="firstName">First name</label>
+                                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="First name">
+                            </div>
+                            <div>
+                                <label for="lastName">Last name</label>
+                                <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="Last name">
+                            </div>
+                            <div>
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+                            </div>
+                            <div>
+                                <label for="telephone">Telephone</label>
+                                <input type="tel" id="telephone" name="telephone" required autocomplete="tel" placeholder="+27 800 000 000" data-validate="phone">
+                            </div>
+                            <div class="full-width">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" required autocomplete="street-address" placeholder="Street address or area">
+                            </div>
+                            <div>
+                                <label for="messageType">Message type</label>
+                                <select id="messageType" name="messageType" required>
+                                    <option value="">Select a message type</option>
+                                    <option value="General question">General question</option>
+                                    <option value="Booking follow-up">Booking follow-up</option>
+                                    <option value="Complaint or feedback">Complaint or feedback</option>
+                                    <option value="Emergency support">Emergency support</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="preferredContact">Preferred contact</label>
+                                <select id="preferredContact" name="preferredContact" required>
+                                    <option value="">Select a contact method</option>
+                                    <option value="Email">Email</option>
+                                    <option value="Phone">Phone</option>
+                                </select>
+                            </div>
+                            <div class="full-width">
+                                <label for="question">Full message</label>
+                                <textarea id="question" name="question" rows="6" required data-minlength="15" placeholder="Write your message here"></textarea>
+                            </div>
+                        </div>
 
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" required placeholder="Address" autocomplete="address-line1">
+                        <p class="form-status status-info" aria-live="polite">Complete the form and submit to generate a send-ready email draft.</p>
+                        <input type="submit" value="Send message" data-label="Send message">
+                    </form>
+                    <div id="contactResult" class="result-panel" aria-live="polite">
+                        <h3>What happens next?</h3>
+                        <p>After validation, this page prepares your message for async website submission and generates an email draft addressed to the recipient configured in the code.</p>
+                    </div>
+                </article>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="email" autocomplete="email">
-
-                    <label for="telephone">Telephone</label>
-                    <input type="tel" id="telephone" name="telephone" required placeholder="phone number" autocomplete="tel">
-
-                    <label for="question">Ask a question</label>
-                    <textarea id="question" name="question" rows="4" required placeholder="Type your question here"></textarea>
-
-                    <input type="submit" value="Submit">
-                </form>
+                <article class="card" data-animate>
+                    <span class="eyebrow">Service area map</span>
+                    <h2>Where we operate</h2>
+                    <div id="map" tabindex="0" aria-label="Interactive map of TMAN Operations service hubs"></div>
+                    <p class="map-caption">The map highlights key Gauteng coverage points for Johannesburg, Pretoria, and Midrand. Select a marker to see availability guidance and a quick link to the enquiry page.</p>
+                </article>
             </section>
         </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>Contact: info@tmanoperations.example | Tel: +27 800 000 000</p>
+        <div class="container footer-grid">
+            <div>
+                <h2>Need a service estimate instead?</h2>
+                <p>Use the <a href="enquiry.html">enquiry page</a> for pricing, scheduling, volunteer interest, or sponsorship opportunities.</p>
+            </div>
+            <div>
+                <p><strong>Email:</strong> <a href="mailto:info@tmanoperations.example">info@tmanoperations.example</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+27800000000">+27 800 000 000</a></p>
+            </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Emergency leak repair",
+    "description": "Rapid response for burst pipes, leaking valves, and water loss issues in homes and small businesses.",
+    "category": "plumbing",
+    "priceFrom": 450,
+    "availability": "24/7 call-out",
+    "turnaround": "Same day",
+    "location": "Johannesburg and nearby areas",
+    "tags": "emergency plumbing leak burst pipe urgent"
+  },
+  {
+    "id": 2,
+    "title": "Drain cleaning",
+    "description": "Blocked drain clearing, smell diagnosis, and preventative maintenance for kitchens, bathrooms, and outdoor drains.",
+    "category": "plumbing",
+    "priceFrom": 320,
+    "availability": "Mon-Sat",
+    "turnaround": "Within 24 hours",
+    "location": "Pretoria, Midrand, Centurion",
+    "tags": "drain cleaning blockage maintenance plumbing"
+  },
+  {
+    "id": 3,
+    "title": "Bathroom fixture installation",
+    "description": "Professional fitting of taps, toilets, basins, showers, and mixers with leak testing before handover.",
+    "category": "installation",
+    "priceFrom": 650,
+    "availability": "Booked appointment",
+    "turnaround": "1 to 2 days",
+    "location": "Across Gauteng",
+    "tags": "toilet tap basin shower installation bathroom"
+  },
+  {
+    "id": 4,
+    "title": "Electrical fault finding",
+    "description": "Inspection and repair for tripping circuits, damaged outlets, lighting faults, and safety concerns.",
+    "category": "electrical",
+    "priceFrom": 550,
+    "availability": "Mon-Sat",
+    "turnaround": "Same day or next day",
+    "location": "Johannesburg, Sandton, Randburg",
+    "tags": "electrical fault lights circuits outlet repair"
+  },
+  {
+    "id": 5,
+    "title": "DB board upgrades",
+    "description": "Distribution board upgrades and compliance-focused electrical improvements for safer properties.",
+    "category": "electrical",
+    "priceFrom": 1800,
+    "availability": "Booked appointment",
+    "turnaround": "2 to 3 days",
+    "location": "Selected Gauteng suburbs",
+    "tags": "db board upgrade electrical compliance"
+  },
+  {
+    "id": 6,
+    "title": "Geyser maintenance",
+    "description": "Element, thermostat, and pressure valve checks with replacement recommendations for reliable hot water.",
+    "category": "maintenance",
+    "priceFrom": 700,
+    "availability": "Mon-Fri",
+    "turnaround": "Within 48 hours",
+    "location": "Pretoria and East Rand",
+    "tags": "geyser maintenance thermostat hot water plumbing"
+  },
+  {
+    "id": 7,
+    "title": "Commercial maintenance plan",
+    "description": "Recurring support for offices, retail spaces, and community facilities that need dependable plumbing and electrical cover.",
+    "category": "maintenance",
+    "priceFrom": 2500,
+    "availability": "Contract based",
+    "turnaround": "Custom schedule",
+    "location": "Across Gauteng",
+    "tags": "commercial maintenance contract plumbing electrical"
+  },
+  {
+    "id": 8,
+    "title": "Volunteer and sponsor onboarding",
+    "description": "Support package for community projects, sponsor coordination, and volunteer participation opportunities.",
+    "category": "community",
+    "priceFrom": 0,
+    "availability": "Limited openings",
+    "turnaround": "Review within 3 days",
+    "location": "Community outreach projects",
+    "tags": "volunteer sponsor community outreach support"
+  }
+]

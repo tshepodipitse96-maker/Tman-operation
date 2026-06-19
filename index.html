@@ -1,21 +1,53 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMAN Operations - Home</title>
+    <title>TMAN Operations | Plumbing and Electrical Services in Gauteng</title>
+    <meta name="description" content="TMAN Operations delivers plumbing, electrical, maintenance, and emergency response services across Gauteng with fast turnaround and professional support.">
+    <meta name="keywords" content="TMAN Operations, plumbing Gauteng, electrical services Gauteng, emergency plumber Johannesburg, drain cleaning, maintenance services">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b3d91">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta property="og:title" content="TMAN Operations | Reliable Plumbing and Electrical Services">
+    <meta property="og:description" content="Book plumbing, electrical, and emergency response support for homes, businesses, and community projects in Gauteng.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tman-operations.netlify.app/">
+    <meta property="og:image" content="https://tman-operations.netlify.app/plumbing.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TMAN Operations">
+    <meta name="twitter:description" content="Professional plumbing and electrical services in Gauteng.">
+    <link rel="canonical" href="https://tman-operations.netlify.app/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="CSS/styles.css">
-    <meta name="description" content="TMAN Operations is a trusted plumbing and electrical service provider in Gauteng since 2023.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TMAN Operations",
+      "image": "https://tman-operations.netlify.app/plumbing.jpg",
+      "url": "https://tman-operations.netlify.app/",
+      "telephone": "+27 800 000 000",
+      "email": "info@tmanoperations.example",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "areaServed": "Gauteng",
+      "description": "TMAN Operations provides plumbing, electrical, maintenance, and emergency support services."
+    }
+    </script>
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a class="brand" href="index.html">
+            <a class="brand" href="index.html" aria-label="TMAN Operations home">
                 <span class="logo" aria-hidden="true"></span>
-                <h1>TMAN Operations</h1>
+                <span class="brand-title">TMAN Operations</span>
             </a>
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="index.html">Home</a>
+                <a href="index.html" aria-current="page">Home</a>
                 <a href="about.html">About</a>
                 <a href="service.html">Services</a>
                 <a href="contact.html">Contact</a>
@@ -26,38 +58,161 @@
 
     <main class="site-main">
         <div class="container">
-            <section class="hero">
-                <h1>WELCOME TO TMAN OPERATIONS</h1>
-                <p>TMAN OPERATIONS is a well-established plumbing and electrical service provider operating in Gauteng, South Africa since 2023.</p>
-                <p><a class="btn" href="enquiry.html">Join Our Operations</a></p>
-            </section>
-
-            <section class="card">
-                <h2>KEY SERVICES</h2>
-                <p>Our team provides dependable plumbing and electrical support with fast response times and honest pricing.</p>
-                <ul class="services">
-                    <li>Plumbing</li>
-                    <li>Electrical</li>
-                    <li>Drain cleaning</li>
-                    <li>Emergency plumbing</li>
-                </ul>
-            </section>
-
-            <section class="card">
-                <h2>Featured Work</h2>
-                <p>Act now, claim your spot in our operations and you can join for free.</p>
-                <div class="grid-images">
-                    <img class="responsive" src="c:\Users\Student\Downloads\plumbing pic.jpg" alt="Plumbing services">
-                    <img class="responsive" src="c:\Users\Student\Downloads\plumbing.jpg" alt="Plumbing work">
+            <section class="hero" data-animate>
+                <div>
+                    <span class="eyebrow">Trusted support in Gauteng</span>
+                    <h1>Fast plumbing and electrical solutions for homes, businesses, and community projects.</h1>
+                    <p>TMAN Operations combines responsive field service, preventative maintenance, and transparent communication to keep your property running safely and efficiently.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="service.html">Explore services</a>
+                        <a class="btn btn-secondary" href="enquiry.html">Request an estimate</a>
+                        <button
+                            class="btn btn-secondary"
+                            type="button"
+                            data-open-modal="true"
+                            data-modal-title="Why choose TMAN Operations?"
+                            data-modal-content="<p>We focus on rapid response, dependable workmanship, and practical solutions for both residential and commercial clients.</p><p>Our services cover emergency leaks, installations, electrical troubleshooting, and ongoing maintenance support throughout Gauteng.</p>"
+                        >
+                            Why choose us
+                        </button>
+                    </div>
+                    <div class="hero-stats" aria-label="Business highlights">
+                        <div class="stat-card">
+                            <strong>24/7</strong>
+                            <span>Emergency support</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>4+</strong>
+                            <span>Core service areas</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>2023</strong>
+                            <span>Serving Gauteng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="plumbing.jpg" alt="TMAN Operations technician working on plumbing service equipment" loading="eager" decoding="async">
                 </div>
             </section>
 
-            <section class="card">
-                <h2>Team Profiles</h2>
-                <p>Meet the experienced technicians who deliver reliable service across Gauteng.</p>
-                <img class="responsive" src="c:\Users\Student\Downloads\adam-plumbing.jpg" alt="Team member">
+            <section class="section-grid" aria-label="Quick introduction">
+                <article class="card" data-animate>
+                    <span class="eyebrow">What we do</span>
+                    <h2>Professional service with practical results</h2>
+                    <p>From urgent pipe repairs to scheduled electrical maintenance, we deliver responsive workmanship with clear next steps and local coverage.</p>
+                    <ul class="services">
+                        <li>Emergency plumbing response</li>
+                        <li>Drain cleaning and repair</li>
+                        <li>Electrical fault finding</li>
+                        <li>Installation and maintenance</li>
+                    </ul>
+                </article>
+                <article class="card visual-card" data-animate>
+                    <img class="responsive" src="adam-plumbing.jpg" alt="TMAN Operations plumbing team at a work site" loading="lazy" decoding="async">
+                </article>
+            </section>
+
+            <section class="card" data-animate>
+                <span class="eyebrow">Dynamic content</span>
+                <h2>Featured services</h2>
+                <p>These service cards load dynamically from the website data source and link directly to the enquiry flow.</p>
+                <div id="featuredServices" class="cards-grid" aria-live="polite">
+                    <article class="service-card" data-animate>
+                        <span class="pill">Plumbing</span>
+                        <h3>Emergency leak repair</h3>
+                        <p>Fast support for burst pipes, active leaks, damaged valves, and urgent water loss problems in homes and small businesses.</p>
+                        <div class="service-meta">
+                            <span>From R450</span>
+                            <span>24/7 call-out</span>
+                        </div>
+                        <button class="btn btn-secondary" type="button" data-open-service="1">View details</button>
+                    </article>
+                    <article class="service-card" data-animate>
+                        <span class="pill">Plumbing</span>
+                        <h3>Drain cleaning</h3>
+                        <p>Blocked drain clearing, smell diagnosis, and preventative maintenance for kitchens, bathrooms, and outdoor drainage systems.</p>
+                        <div class="service-meta">
+                            <span>From R320</span>
+                            <span>Mon-Sat</span>
+                        </div>
+                        <button class="btn btn-secondary" type="button" data-open-service="2">View details</button>
+                    </article>
+                    <article class="service-card" data-animate>
+                        <span class="pill">Installation</span>
+                        <h3>Bathroom fixture installation</h3>
+                        <p>Professional fitting of taps, toilets, basins, showers, and mixers with testing to make sure everything works properly.</p>
+                        <div class="service-meta">
+                            <span>From R650</span>
+                            <span>Booked appointment</span>
+                        </div>
+                        <button class="btn btn-secondary" type="button" data-open-service="3">View details</button>
+                    </article>
+                </div>
+                <p><a class="inline-link" href="service.html">View the full searchable service catalogue</a></p>
+            </section>
+
+            <section class="card" data-animate>
+                <span class="eyebrow">Project gallery</span>
+                <h2>Recent work and team activity</h2>
+                <div class="gallery" aria-label="Project gallery">
+                    <img class="gallery-item" src="plumbing.jpg" data-full="plumbing.jpg" data-caption="On-site plumbing maintenance and repair support." alt="On-site plumbing maintenance work" loading="lazy" decoding="async">
+                    <img class="gallery-item" src="adam-plumbing.jpg" data-full="adam-plumbing.jpg" data-caption="Team member preparing plumbing equipment for service delivery." alt="TMAN Operations team member preparing equipment" loading="lazy" decoding="async">
+                    <img class="gallery-item" src="plumbing.tman operations.jpg" data-full="plumbing.tman operations.jpg" data-caption="TMAN Operations field work for residential and commercial clients." alt="TMAN Operations field service activity" loading="lazy" decoding="async">
+                </div>
+            </section>
+
+            <section class="card" data-animate>
+                <span class="eyebrow">FAQs</span>
+                <h2>Quick answers before you book</h2>
+                <div class="accordion">
+                    <button class="accordion-toggle" type="button">What areas do you serve?</button>
+                    <div class="accordion-panel">
+                        <p>We work across Gauteng, including Johannesburg, Pretoria, Midrand, Centurion, and selected surrounding areas. The interactive map on the contact page highlights our core service hubs.</p>
+                    </div>
+                    <button class="accordion-toggle" type="button">Do you offer emergency services?</button>
+                    <div class="accordion-panel">
+                        <p>Yes. Emergency leak and urgent plumbing call-outs are available with priority response, depending on technician availability and travel distance.</p>
+                    </div>
+                    <button class="accordion-toggle" type="button">Can I enquire about volunteering or sponsorship?</button>
+                    <div class="accordion-panel">
+                        <p>Yes. The enquiry page includes dedicated options for community volunteers and sponsors so we can respond with the right onboarding information.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h2>TMAN Operations</h2>
+                <p>Reliable plumbing, electrical, and maintenance support for Gauteng households, businesses, and community initiatives.</p>
+            </div>
+            <div>
+                <p><strong>Email:</strong> <a href="mailto:info@tmanoperations.example">info@tmanoperations.example</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+27800000000">+27 800 000 000</a></p>
+                <p><a href="contact.html">Contact us</a> or <a href="enquiry.html">submit an enquiry</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded gallery image">
+        <div class="lightbox-content">
+            <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Close gallery image">×</button>
+            <img id="lightboxImage" src="" alt="">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <div id="siteModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-panel">
+            <button id="modalClose" class="modal-close" type="button" aria-label="Close information dialog">×</button>
+            <h2 id="modalTitle">More information</h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>

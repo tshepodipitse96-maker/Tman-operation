@@ -3,64 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry</title>
+    <title>TMAN Operations Enquiry | Pricing, Availability, Volunteer, and Sponsor Requests</title>
+    <meta name="description" content="Send an enquiry to TMAN Operations for service pricing, availability, volunteer opportunities, or sponsorship support.">
+    <meta name="keywords" content="service enquiry Gauteng, TMAN Operations enquiry, volunteer request, sponsor enquiry, plumbing quotation">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b3d91">
+    <meta property="og:title" content="TMAN Operations Enquiry">
+    <meta property="og:description" content="Request pricing, availability, volunteer details, or sponsorship information from TMAN Operations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tman-operations.netlify.app/enquiry">
+    <meta property="og:image" content="https://tman-operations.netlify.app/adam-plumbing.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://tman-operations.netlify.app/enquiry">
     <link rel="stylesheet" href="CSS/styles.css">
-    <meta name="description" content="Send an enquiry to TMAN Operations">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html">
                 <span class="logo" aria-hidden="true"></span>
-                <h1>TMAN Operations</h1>
+                <span class="brand-title">TMAN Operations</span>
             </a>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="service.html">Services</a>
                 <a href="contact.html">Contact</a>
-                <a href="enquiry.html">Enquiry</a>
+                <a href="enquiry.html" aria-current="page">Enquiry</a>
             </nav>
         </div>
     </header>
 
     <main class="site-main">
         <div class="container">
-            <section class="hero">
-                <h1>Enquiry</h1>
-                <p>Fill in the form below and we'll get back to you promptly.</p>
+            <section class="hero" data-animate>
+                <div>
+                    <span class="eyebrow">Dedicated enquiry form</span>
+                    <h1>Request pricing, availability, or community support information.</h1>
+                    <p>This form is designed for service quotations, volunteer interest, sponsorship conversations, and related availability questions. Once validated, it generates a tailored response based on your enquiry type.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="service.html">Review services</a>
+                        <a class="btn btn-secondary" href="contact.html">Send a general message</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="adam-plumbing.jpg" alt="TMAN Operations representative ready to help with enquiries" loading="eager" decoding="async">
+                </div>
             </section>
 
-            <section class="card">
-                <form class="contact-form">
-                    <label>First Name</label>
-                    <input type="text" required placeholder="Name">
+            <section class="section-grid">
+                <article class="card" data-animate>
+                    <span class="eyebrow">Estimate and response</span>
+                    <h2>Enquiry submission</h2>
+                    <form
+                        id="enquiryForm"
+                        class="contact-form"
+                        name="enquiry"
+                        action="/"
+                        method="post"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
+                    >
+                        <input type="hidden" name="form-name" value="enquiry">
+                        <p hidden>
+                            <label>Do not fill this out: <input name="bot-field"></label>
+                        </p>
 
-                    <label>Last Name</label>
-                    <input type="text" required placeholder="Surname">
+                        <div class="contact-grid">
+                            <div>
+                                <label for="eFirst">First name</label>
+                                <input id="eFirst" name="firstName" type="text" required placeholder="First name" autocomplete="given-name">
+                            </div>
+                            <div>
+                                <label for="eLast">Last name</label>
+                                <input id="eLast" name="lastName" type="text" required placeholder="Last name" autocomplete="family-name">
+                            </div>
+                            <div>
+                                <label for="eEmail">Email address</label>
+                                <input id="eEmail" name="email" type="email" required placeholder="name@example.com" autocomplete="email">
+                            </div>
+                            <div>
+                                <label for="eTel">Telephone</label>
+                                <input id="eTel" name="telephone" type="tel" required placeholder="+27 800 000 000" autocomplete="tel" data-validate="phone">
+                            </div>
+                            <div>
+                                <label for="eType">Enquiry type</label>
+                                <select id="eType" name="type" required>
+                                    <option value="">Select an enquiry type</option>
+                                    <option value="service">Service quote</option>
+                                    <option value="volunteer">Volunteer</option>
+                                    <option value="sponsor">Sponsorship</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="requestedService">Requested service</label>
+                                <select id="requestedService" name="requestedService">
+                                    <option value="">Loading available services...</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="preferredDate">Preferred date</label>
+                                <input id="preferredDate" name="preferredDate" type="date" data-future-date="true">
+                            </div>
+                            <div>
+                                <label for="budget">Estimated budget</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select a budget range</option>
+                                    <option value="Under R500">Under R500</option>
+                                    <option value="R500 - R1500">R500 - R1500</option>
+                                    <option value="R1500 - R3000">R1500 - R3000</option>
+                                    <option value="R3000+">R3000+</option>
+                                </select>
+                            </div>
+                            <div class="full-width">
+                                <label for="eAddress">Service address or area</label>
+                                <input id="eAddress" name="address" type="text" required placeholder="Street address or suburb">
+                            </div>
+                            <div class="full-width">
+                                <label for="eDetails">Details</label>
+                                <textarea id="eDetails" name="details" required data-minlength="15" placeholder="Describe the service need, volunteer interest, or sponsorship goal"></textarea>
+                            </div>
+                        </div>
 
-                    <label>Address</label>
-                    <input type="text" required placeholder="Address">
+                        <p class="form-status status-info" aria-live="polite">Submit the enquiry to receive a tailored availability and pricing response on this page.</p>
+                        <input type="submit" value="Send enquiry" data-label="Send enquiry">
+                    </form>
+                    <div id="enquiryResult" class="result-panel" aria-live="polite">
+                        <h3>How your response works</h3>
+                        <p>Service enquiries return a pricing and availability estimate. Volunteer and sponsor requests return the next steps for community follow-up.</p>
+                    </div>
+                </article>
 
-                    <label>Email</label>
-                    <input type="email" required placeholder="email">
-
-                    <label>Telephone</label>
-                    <input type="tel" required placeholder="phone number">
-
-                    <label>Details</label>
-                    <textarea required placeholder="detail your enquiry here"></textarea>
-
-                    <input type="submit" value="Send Enquiry">
-                </form>
+                <article class="card" data-animate>
+                    <span class="eyebrow">Helpful guidance</span>
+                    <h2>Before you submit</h2>
+                    <ul class="check-list">
+                        <li>Select the closest matching service for a more accurate estimate.</li>
+                        <li>Use the service page if you want to search by category and compare starting prices.</li>
+                        <li>Choose volunteer or sponsorship if your request is community-related rather than a paid service booking.</li>
+                        <li>For general questions that do not need an estimate, use the contact page instead.</li>
+                    </ul>
+                </article>
             </section>
         </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>We aim to reply within 24 hours.</p>
+        <div class="container footer-grid">
+            <div>
+                <h2>Response time</h2>
+                <p>We aim to respond to most enquiries within 24 hours, with urgent service matters prioritised where possible.</p>
+            </div>
+            <div>
+                <p><strong>Email:</strong> <a href="mailto:info@tmanoperations.example">info@tmanoperations.example</a></p>
+                <p><strong>Need a general message?</strong> <a href="contact.html">Use the contact form</a></p>
+            </div>
         </div>
     </footer>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>
